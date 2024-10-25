@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta name="description" content="SA Groups - Your trusted partner in real estate development, construction consulting, and interior design services.">
     <meta name="keywords" content="Real Estate, Construction, Building Materials, Interior Design, Architecture">
     <meta name="author" content="SA Groups PVT LTD">
@@ -27,55 +28,55 @@
         }
         body {
             font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
             color: #333;
             background: #f7f7f7;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh;  /* Full viewport height */
         }
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 80%;
             margin: auto;
+            overflow: hidden;
         }
+
         header {
             background: #F1DECC;
-            padding: 1rem;
+            padding: 1rem 0;
             text-align: center;
         }
         header img {
-            max-width: 250px;
+            width: 250px;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
-        header nav ul {
+        header ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
+            padding: 0;
         }
-        header nav ul li a {
+        header ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header ul li a {
             color: #333;
             text-decoration: none;
             padding: 5px 10px;
             border-radius: 5px;
             transition: background 0.3s ease;
         }
-        header nav ul li a:hover {
+        header ul li a:hover {
             background: #2c3e50;
             color: #fff;
         }
         .banner {
             background: url('images/bckrd.jpg') no-repeat center center/cover;
             color: #fff;
-            height: 50vh;
+            height: 500px;
             text-align: center;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
         }
         .banner::after {
             content: '';
@@ -86,13 +87,17 @@
             bottom: 0;
             background: rgba(0,0,0,0.5);
         }
-        .banner-content {
+        .banner h2 {
+            font-size: 48px;
+            margin-bottom: 200px;
             position: relative;
             z-index: 2;
         }
-        .banner h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .banner p {
+            font-size: 34px;
+            color: rgb(255, 255, 255);
+            position: relative;
+            z-index: 2;
         }
         .btn {
             display: inline-block;
@@ -102,6 +107,8 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
         .btn:hover {
             background: #d35400;
@@ -110,17 +117,19 @@
             padding: 50px 0;
             text-align: center;
         }
-        .services h2 {
-            font-size: 2rem;
+        .services h2, .about h2, .contact h2 {
+            font-size: 36px;
             margin-bottom: 20px;
         }
         .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
         .service-item {
+            flex-basis: 45%;
             background: #fff;
+            margin: 10px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -131,29 +140,62 @@
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
         }
         .service-item h3 {
-            font-size: 1.5rem;
+            font-size: 24px;
             margin-bottom: 10px;
         }
-        .service-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .service-item i {
+            color: #333;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .banner h2 {
-                font-size: 2rem;
-            }
             header img {
-                max-width: 180px;
+                width: 200px;
             }
-            header nav ul {
-                gap: 10px;
+            .banner h2 {
+                font-size: 36px;
+            }
+            .banner p {
+                font-size: 24px;
+            }
+            .container {
+                width: 90%;
+            }
+            .service-item {
+                flex-basis: 100%;
+            }
+            .service-section {
+                flex-direction: column;
+            }
+            .service-image {
+                width: 100%;
+                height: auto;
+                margin: 0 0 20px 0;
+            }
+            .service-description {
+                padding: 10px;
             }
         }
-        
-        /* Contact Form */
+
+        @media (max-width: 480px) {
+            header img {
+                width: 150px;
+            }
+            .banner h2 {
+                font-size: 28px;
+            }
+            .banner p {
+                font-size: 18px;
+            }
+            .btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .service-description p {
+                font-size: 14px;
+            }
+        }
+
         form .form-group {
             margin-bottom: 15px;
             text-align: left;
@@ -168,100 +210,157 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-
-        footer {
-            background: #d8c1aa;
-            color: #333;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
+        .contact-options {
+            margin-top: 20px;
         }
+        .contact-options a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000000;
+            transition: background 0.3s ease;
+        }
+        .contact-options a:first-child {
+            background-color: #dbdbdb;
+        }
+        .contact-options a:last-child {
+            background-color: #dbdbdb;
+        }
+        .contact-options a:hover {
+            opacity: 0.8;
+        }
+
+        .service-section {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .service-image {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            width: 300px; /* Fixed width for images */
+            height: 300px; /* Fixed height for images */
+            margin-right: 20px; /* Space between image and description */
+        }
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .service-image img.active {
+            opacity: 1;
+        }
+        .service-description {
+            flex: 2;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50; /* Darker color for headings */
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555; /* Softer color for paragraph text */
+        }
+    footer {
+        background: #d8c1aa;
+        color: #333;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        position: static;  /* Keep it static by default */
+    }
+
+    footer.fixed {
+        position: fixed;  /* Change to fixed when this class is added */
+        bottom: 0;        /* Position it at the bottom */
+        left: 0;          /* Ensure it starts from the left edge */
+        z-index: 1000;    /* Make sure it stays above other elements */
+    }
+
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
-            <img src="images/logocmp.jpg" alt="Company Logo - SA Groups">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <!-- Add logo image here -->
+            <img src="images/logoss.png" alt="SA Groups Logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </header>
 
+    <!-- Banner Section -->
     <section class="banner">
-        <div class="banner-content">
-            <h2>Building the Future</h2>
-            <p>Your trusted partner in real estate, construction and designing services.</p>
-            <a href="#services" class="btn">Explore Our Services</a>
+        <div class="container">
+            <h2>Welcome to Your Construction Solution</h2>
+            <p>Your Trusted Partner in Real Estate &amp; Development</p>
+            <a href="#" class="btn">Get Started</a>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-item">
-                <div class="service-image">
-                    <img src="images/real-estate1.jpg" alt="Real Estate Development">
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <!-- Service Items Here -->
+                <div class="service-item">
+                    <i class="fas fa-home fa-2x"></i>
+                    <h3>Real Estate Development</h3>
+                    <p>We develop residential and commercial properties with quality and precision.</p>
                 </div>
-                <h3>Real Estate Development</h3>
-                <p>We offer residential and commercial real estate development projects across the region.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-image">
-                    <img src="images/building-material1.jpg" alt="Building Material Supply">
+                <div class="service-item">
+                    <i class="fas fa-truck fa-2x"></i>
+                    <h3>Building Material Supply</h3>
+                    <p>We provide high-quality building materials for your construction needs.</p>
                 </div>
-                <h3>Building Material Supply</h3>
-                <p>Get high-quality building materials delivered to your construction site, ensuring timely and reliable service.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-image">
-                    <img src="images/consulting1.jpg" alt="Construction Consulting">
-                </div>
-                <h3>Construction Consulting</h3>
-                <p>Expert consulting for project management, architecture, and design, helping you build efficiently.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-image">
-                    <img src="images/interior1.jpg" alt="Interior Design & Architecture">
-                </div>
-                <h3>Interior Design & Architecture</h3>
-                <p>Interior design and architectural services to bring your vision to life, tailored to your needs.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are a leading construction and real estate company with years of experience in building a better tomorrow.</p>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a leading company in real estate development, building material supply, and interior design. Our team of professionals is dedicated to delivering high-quality projects that exceed our clients' expectations.</p>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to discuss a project, feel free to reach out to us.</p>
+            <div class="contact-options">
+                <a href="#"><i class="fas fa-envelope"></i> Email Us</a>
+                <a href="#"><i class="fas fa-phone"></i> Call Us</a>
             </div>
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+        </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 SA Groups PVT LTD. All Rights Reserved.</p>
+        <p>&copy; 2024 SA Groups PVT LTD</p>
     </footer>
 </body>
 </html>
