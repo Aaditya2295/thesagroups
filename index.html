@@ -75,7 +75,7 @@
          .banner {
             background: url('images/bckrd.jpg') no-repeat center center/cover;
             color: #fff;
-             height: 550px; /* Set a specific height */
+             height: 500px; /* Set a specific height */
             text-align: center;
             position: relative;
         }
@@ -95,7 +95,7 @@
             z-index: 2;
         }
         .banner p {
-            font-size: 30px;
+            font-size: 34px;
            color:rgb(255, 255, 255);
             position: relative;
             z-index: 2;
@@ -482,17 +482,42 @@ footer.fixed {
     // Attach the event listener to the scroll event
     window.addEventListener('scroll', checkFooterPosition);
 </script>
-    <script>
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+   <script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+
+        // Custom smooth scroll function
+        const scrollTo = (element, duration) => {
+            const start = window.pageYOffset;
+            const targetPosition = element.getBoundingClientRect().top + start;
+            const distance = targetPosition - start;
+            let startTime = null;
+
+            const animation = currentTime => {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutCubic(timeElapsed, start, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            };
+
+            const easeInOutCubic = (t, b, c, d) => {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            };
+
+            requestAnimationFrame(animation);
+        };
+
+        scrollTo(target, 1500); // Adjust duration (1000ms = 1 second) as needed
     });
 });
- </script>
+</script>
+
 
    
 </body>
