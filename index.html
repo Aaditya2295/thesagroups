@@ -19,237 +19,237 @@
 
     <!-- Styles -->
     <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Raleway', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f7f7f7;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
 
-        header {
-            background: #F1DECC;
-            padding: 1rem 0;
-            text-align: center;
-        }
+/* Header */
+header {
+    background: #F1DECC;
+    padding: 1rem 0;
+    text-align: center;
+}
 
-        header img {
-            width: 250px;
-            height: auto;
-        }
+header img {
+    width: 250px;
+    height: auto;
+}
 
-        header ul {
-            list-style: none;
-            padding: 0;
-        }
+header ul {
+    list-style: none;
+    padding: 0;
+}
 
-        header ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+header ul li {
+    display: inline;
+    margin: 0 10px;
+}
 
-        header ul li a {
-            color: #333;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
+header ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
 
-        header ul li a:hover {
-            background: #2c3e50;
-            color: #fff;
-        }
+header ul li a:hover {
+    background: #2c3e50;
+    color: #fff;
+}
 
-        /* Main Banner */
-        .banner {
-            background: url('images/bckrd.jpg') no-repeat center center/cover;
-            color: #fff;
-            height: 500px;
-            text-align: center;
-            position: relative;
-        }
+/* Main Banner */
+.banner {
+    background: url('images/bckrd.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 500px;
+    text-align: center;
+    position: relative;
+}
 
-        .banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
 
-        .banner h2 {
-            font-size: 48px;
-            margin-bottom: 200px;
-            position: relative;
-            z-index: 2;
-        }
+.banner h2 {
+    font-size: 48px;
+    margin-bottom: 200px;
+    position: relative;
+    z-index: 2;
+}
 
-        .banner p {
-            font-size: 34px;
-            position: relative;
-            z-index: 2;
-        }
+.banner p {
+    font-size: 34px;
+    position: relative;
+    z-index: 2;
+}
 
-        .btn {
-            display: inline-block;
-            background: #e67e22;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
 
-        .btn:hover {
-            background: #d35400;
-        }
+.btn:hover {
+    background: #d35400;
+}
 
-        /* Services Section */
-        .services {
-            padding: 50px 0;
-            text-align: center;
-        }
+/* Services Section */
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
 
-        .service-section {
-            display: flex;
-            flex-direction: column;
-            margin: 50px 0;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+.service-section {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-        .service-image {
-            width: 100%;
-            height: 300px;
-            border-radius: 15px;
-            overflow: hidden;
-        }
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
+.service-image img.active {
+    display: block; /* Make the active image visible */
+}
 
-        .service-image img.active {
-            opacity: 1;
-        }
+.service-image img {
+    display: none; /* Hide all other images */
+}
 
-        .service-description {
-            padding: 20px;
-        }
 
-        h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
 
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #555;
-        }
+.service-description {
+    padding: 20px;
+}
 
-        /* About Section */
-        .about {
-            padding: 50px 0;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-        /* Contact Section */
-        .contact {
-            padding: 50px 0;
-            text-align: center;
-            background-color: #fff;
-        }
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
 
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
 
-        .contact form input, .contact form textarea {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
 
-        .contact form button {
-            background: #e67e22;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
-        /* Footer */
-        footer {
-            background: #d8c1aa;
-            color: #333;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-            width: 100%;
-        }
+.contact form input,
+.contact form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .service-section {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+.contact form button {
+    background: #e67e22;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-            .service-image {
-                flex: 1;
-                max-width: 50%;
-            }
+/* Footer */
+footer {
+    background: #d8c1aa;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+}
 
-            .service-description {
-                flex: 1;
-            }
-        }
+/* Responsive Design */
+@media (min-width: 768px) {
+    .service-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-        @media (max-width: 768px) {
-            .banner h2 {
-                font-size: 36px;
-            }
+    .service-image {
+        flex: 1;
+        max-width: 50%;
+    }
 
-            .banner p {
-                font-size: 24px;
-            }
+    .service-description {
+        flex: 1;
+    }
+}
 
-            .btn {
-                padding: 8px 16px;
-            }
-        }
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 36px;
+    }
+
+    .banner p {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
     </style>
 </head>
 <body>
@@ -285,52 +285,84 @@
             <h2>Our Services</h2>
             <div class="service-section">
                 <div class="service-image">
-                    <img src="images/real-estate1.jpg" alt="Real Estate Development" class="active">
-                    <img src="images/real-estate2.jpg" alt="Another Real Estate Project">
-                    <img src="images/real-estate3.jpg" alt="Residential Projects">
+                   <img src="images/real-estate1.jpg" alt="Real Estate Image 1" class="active">
+            <img src="images/real-estate2.jpg" alt="Real Estate Image 2">
+            <img src="images/real-estate3.jpg" alt="Real Estate Image 3">
+            <img src="images/real-estate4.jpg" alt="Real Estate Image 4">
+            <img src="images/real-estate5.jpg" alt="Real Estate Image 5">
                 </div>
                 <div class="service-description">
                     <h3>Real Estate Development</h3>
-                    <p>We offer residential and commercial development projects, ensuring quality and sustainability.</p>
+            <p><b>"Real estate is not just about property, it's about people, places, and the potential to transform the future."</b><p>
+            <p>We offer residential and commercial real estate development projects across the region, ensuring quality and sustainability.</p>
+        </div>
+            </div>
+            <div class="service-section">
+                <div class="service-image">
+            <img src="images/building-material1.jpg" alt="Building Material Image 1" class="active">
+            <img src="images/building-material2.jpg" alt="Building Material Image 2">
+            <img src="images/building-material3.jpg" alt="Building Material Image 3">
+            <img src="images/building-material4.jpg" alt="Building Material Image 4">
+            <img src="images/building-material5.jpg" alt="Building Material Image 5">
+                </div>
+                <div class="service-description">
+                     <h3>Building Material Supply</h3>
+            <p><b>"Quality building materials lay the foundation not just for structures, but for lasting legacies. The strength of what we create depends on the integrity of what we use."</b><p>
+            <p>Get high-quality building materials delivered to your construction site, ensuring timely and reliable service.</p>
+        </div>
+            </div>
+            <div class="service-section">
+                <div class="service-image">
+                   <img src="images/consulting1.jpg" alt="Consulting Image 1" class="active">
+            <img src="images/consulting2.jpg" alt="Consulting Image 2">
+            <img src="images/consulting3.jpg" alt="Consulting Image 3">
+            <img src="images/consulting4.jpg" alt="Consulting Image 4">
+            <img src="images/consulting5.jpg" alt="Consulting Image 5">
+                </div>
+                <div class="service-description">
+                     <h3>Construction Consulting</h3>
+            <p><b>In construction consulting, the blueprint for success is built on expertise, precision, and the ability to solve complex problems before they arise.</b><p>
+            <p>Expert consulting for project management, architecture, and design, helping you build efficiently and effectively.</p>
                 </div>
             </div>
             <div class="service-section">
                 <div class="service-image">
-                    <img src="images/building-materials.jpg" alt="Building Materials">
+                    <img src="images/interior1.jpg" alt="Interior Design Image 1" class="active">
+            <img src="images/interior2.jpg" alt="Interior Design Image 2">
+            <img src="images/interior3.jpg" alt="Interior Design Image 3">
+            <img src="images/interior4.jpg" alt="Interior Design Image 4">
+            <img src="images/interior5.jpg" alt="Interior Design Image 5">
                 </div>
                 <div class="service-description">
-                    <h3>Building Materials Supply</h3>
-                    <p>Supplying quality building materials that meet industry standards for your projects.</p>
-                </div>
-            </div>
-            <div class="service-section">
-                <div class="service-image">
-                    <img src="images/construction-consulting.jpg" alt="Construction Consulting">
-                </div>
-                <div class="service-description">
-                    <h3>Construction Consulting</h3>
-                    <p>Providing expert advice and support for all your construction needs.</p>
-                </div>
-            </div>
-            <div class="service-section">
-                <div class="service-image">
-                    <img src="images/interior-design.jpg" alt="Interior Design">
-                </div>
-                <div class="service-description">
-                    <h3>Interior Design & Architecture</h3>
-                    <p>Creating stunning interiors that blend functionality with aesthetics.</p>
-                </div>
+                      <h3>Interior Design & Architecture</h3>
+            <p><b>"Your home should tell the story of who you are, and be a collection of what you love, brought together under one roof."</b><p>
+            <p>Expert interior design and architectural services to bring your vision to life, tailored to your needs and preferences.</p>
+        </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>SA Groups is a leading construction and real estate development company with a commitment to excellence, integrity, and innovation.</p>
-        </div>
-    </section>
+   <!-- About Us Section -->
+     <section id="about" class="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>We are a leading construction and real estate company with years of experience in building a better tomorrow. Our mission is to deliver top-quality construction services with a focus on sustainability and efficiency.</p>
+        <p>In addition to our real estate and construction services, we offer expert interior design and architectural solutions. Whether you're looking to transform your home, office, or any commercial space, our team of experienced architects and interior designers will work with you to bring your vision to life.</p>
+        <p>Our interior design services ensure that every space is functional, stylish, and tailored to the unique needs of our clients. From modern minimalist designs to luxurious traditional styles, we cover it all.</p>
+        <p>We also provide comprehensive architectural services, from planning and designing to project management. Our team works closely with clients to ensure that their architectural projects are completed on time, within budget, and to the highest standards of quality.</p>
+    </div>
+</section>
+<!-- Design Philosophy Section -->
+<section id="philosophy" class="philosophy">
+    <div class="container">
+        <h2>Our Design Philosophy</h2>
+        <p>At SA Groups, our design philosophy revolves around three core principles: functionality, sustainability, and aesthetic innovation. We believe that every space we create should not only look stunning but also serve the needs of the people who use it.</p>
+        <p>We are committed to using environmentally friendly materials and incorporating energy-efficient technologies in all our projects. Our goal is to design spaces that are not just beautiful but also sustainable for future generations.</p>
+        <p>Collaboration is at the heart of our process. We work closely with our clients to understand their vision and turn it into reality, blending form and function in a way that enhances the quality of life and productivity of those who live and work in our spaces.</p>
+        <p>Whether it’s a residential project, a commercial space, or a public building, we approach each project with fresh eyes, ensuring that our designs are unique, innovative, and aligned with our client’s vision and values.</p>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -356,17 +388,69 @@
     </footer>
 
     <script>
-        // Image Carousel for Service Section
-        const images = document.querySelectorAll('.service-image img');
-        let currentImage = 0;
+        // JavaScript for image slideshow
+     function startSlideshow() {
+    const serviceSections = document.querySelectorAll('.service-section');
 
-        function showNextImage() {
-            images[currentImage].classList.remove('active');
-            currentImage = (currentImage + 1) % images.length;
-            images[currentImage].classList.add('active');
-        }
+    serviceSections.forEach(serviceSection => {
+        const images = serviceSection.querySelectorAll('img');
+        let currentIndex = 0;
 
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
+        // Ensure only the first image is visible initially
+        images.forEach((img, index) => {
+            if (index === 0) {
+                img.classList.add('active');
+            } else {
+                img.classList.remove('active');
+            }
+        });
+
+        // Set up the slideshow to cycle through the images
+        setInterval(() => {
+            images[currentIndex].classList.remove('active'); // Hide the current image
+            currentIndex = (currentIndex + 1) % images.length; // Move to the next image
+            images[currentIndex].classList.add('active'); // Show the next image
+        }, 5000); // Change image every 3 seconds
+    });
+}
+
+document.addEventListener('DOMContentLoaded', startSlideshow);
+
     </script>
-</body>
+     <script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+
+        // Custom smooth scroll function
+        const scrollTo = (element, duration) => {
+            const start = window.pageYOffset;
+            const targetPosition = element.getBoundingClientRect().top + start;
+            const distance = targetPosition - start;
+            let startTime = null;
+
+            const animation = currentTime => {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutCubic(timeElapsed, start, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            };
+
+            const easeInOutCubic = (t, b, c, d) => {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            };
+
+            requestAnimationFrame(animation);
+        };
+
+        scrollTo(target, 1500); // Adjust duration (1000ms = 1 second) as needed
+    });
+});
+</script>
+    </body>
 </html>
