@@ -105,12 +105,11 @@ header ul li a:hover {
 
 .banner p {
     font-size: 34px;
-    color: #fff;
     position: relative;
+    color: #fff;
     z-index: 2;
 }
 
-/* Button Styling */
 /* Button Styling */
   .btn {
             display: inline-block;
@@ -212,6 +211,27 @@ p {
     border-radius: 5px;
     cursor: pointer;
 }
+ .contact-options {
+            margin-top: 20px;
+        }
+        .contact-options a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000000;
+            transition: background 0.3s ease;
+        }
+        .contact-options a:first-child {
+            background-color: #dbdbdb;
+        }
+        .contact-options a:last-child {
+            background-color: #dbdbdb;
+        }
+        .contact-options a:hover {
+            opacity: 0.8;
+        }
 
 /* Footer */
 footer {
@@ -377,6 +397,10 @@ footer {
                 <textarea placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
+             <div class="contact-options">
+                <a href="tel:+919151791483"><i class="fas fa-phone"></i> +91 9151791483</a>
+                <a href="mailto:contact@sagroups.com"><i class="fas fa-envelope"></i> thesagroups.com</a>
+            </div>
         </div>
     </section>
 
