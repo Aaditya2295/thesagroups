@@ -20,14 +20,13 @@
 
     <!-- Styles -->
     <style>
-       /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
     font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     color: #333;
@@ -35,263 +34,243 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;  /* Full viewport height */
-    font-size: 16px; /* Base font size */
-}
 
-.container {
-    width: 90%; /* Adjusted for responsiveness */
+        }
+        .container {
+    width: 80%;
     margin: auto;
     overflow: hidden;
 }
 
-header {
-    background: #F1DECC;
-    padding: 2% 0; /* Adjusted for responsiveness */
-    text-align: center;
-}
-
-header img {
-    width: 250px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-header ul {
-    list-style: none;
-    padding: 0;
-}
-
-header ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-header ul li a:hover {
-    background: #2c3e50;
-    color: #fff;
-}
-
-.banner {
-    background: url('images/bckrd.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 500px; /* Set a specific height */
-    text-align: center;
-    position: relative;
-}
-
-.banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.banner h2 {
-    font-size: 3vw; /* Responsive font size based on viewport width */
-    margin-bottom: 200px;
-    position: relative;
-    z-index: 2;
-}
-
-.banner p {
-    font-size: 2vw; /* Responsive font size based on viewport width */
-    color: rgb(255, 255, 255);
-    position: relative;
-    z-index: 2;
-}
-
-.btn {
-    display: inline-block;
-    background: #e67e22;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    position: relative;
-    z-index: 2;
-}
-
-.btn:hover {
-    background: #d35400;
-}
-
-.services,
-.about,
-.contact {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.services h2,
-.about h2,
-.contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.service-grid {
+        header {
+            background: #F1DECC;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header img {
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+        }
+        header ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        header ul li a:hover {
+            background: #2c3e50;
+            color: #fff;
+        }
+         .banner {
+            background: url('images/bckrd.jpg') no-repeat center center/cover;
+            color: #fff;
+             height: 500px; /* Set a specific height */
+            text-align: center;
+            position: relative;
+        }
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .banner h2 {
+            font-size: 48px;
+            margin-bottom: 200px;
+            position: relative;
+            z-index: 2;
+        }
+        .banner p {
+            font-size: 34px;
+           color:rgb(255, 255, 255);
+            position: relative;
+            z-index: 2;
+        }
+        .btn {
+            display: inline-block;
+            background: #e67e22;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        .btn:hover {
+            background: #d35400;
+        }
+        .services, .about, .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .services h2, .about h2, .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+       .service-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.service-item {
-    flex-basis: 45%; /* Adjusted for larger screens */
-    background: #fff;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .service-item {
+            flex-basis: 45%;
+            background: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+        .service-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .service-item i {
+            color: #333;
+        }
 
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-}
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .service-section {
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
-.service-item h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.service-item i {
-    color: #333;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .service-item {
-        flex-basis: 100%; /* Stack items vertically on smaller screens */
-    }
-
-    .banner h2 {
-        font-size: 2.25rem; /* Adjust font size for smaller screens */
-    }
-
-    .banner p {
-        font-size: 1.25rem; /* Adjust font size for smaller screens */
-    }
-
-    .btn {
-        padding: 8px 16px; /* Adjust button padding */
-    }
-
-    .service-description h3 {
-        font-size: 1.5rem; /* Adjust heading size for smaller screens */
-    }
-
-    body {
-        font-size: 14px; /* Smaller font size for mobile */
-    }
-}
-
-form .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form .form-group input,
-form .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.contact-options {
-    margin-top: 20px;
-}
-
-.contact-options a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000000;
-    transition: background 0.3s ease;
-}
-
-.contact-options a:first-child,
-.contact-options a:last-child {
-    background-color: #dbdbdb;
-}
-
-.contact-options a:hover {
-    opacity: 0.8;
-}
-
-.service-section {
-    display: flex;
-    align-items: center;
-    margin: 50px 0;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.service-image {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    width: 100%; /* Full width for images */
-    height: auto; /* Auto height for responsiveness */
-    margin-right: 20px; /* Space between image and description */
-}
-
-.service-image img {
+          .service-image img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
-.service-image img.active {
-    opacity: 1;
-}
+        }
 
-.service-description {
-    flex: 2;
-    padding: 20px;
-}
+      @media (min-width: 768px) { /* Styles for larger screens */ }
+    @media (max-width: 768px) { /* Styles for smaller screens */ }
+{
+            .banner h2 {
+                font-size: 2.25rem;
+            }
 
-h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #2c3e50; /* Darker color for headings */
-}
+            .banner p {
+                font-size: 1.25rem;
+            }
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555; /* Softer color for paragraph text */
-}
+            .btn {
+                padding: 8px 16px;
+            }
 
-footer {
+            .service-description h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        
+        form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form .form-group input, form .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-options {
+            margin-top: 20px;
+        }
+        .contact-options a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000000;
+            transition: background 0.3s ease;
+        }
+        .contact-options a:first-child {
+            background-color: #dbdbdb;
+        }
+        .contact-options a:last-child {
+            background-color: #dbdbdb;
+        }
+        .contact-options a:hover {
+            opacity: 0.8;
+        }
+           body {
+            font-family: 'Raleway', sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .service-section {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .service-image {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            width: 300px; /* Fixed width for images */
+            height: 300px; /* Fixed height for images */
+            margin-right: 20px; /* Space between image and description */
+        }
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .service-image img.active {
+            opacity: 1;
+        }
+        .service-description {
+            flex: 2;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50; /* Darker color for headings */
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555; /* Softer color for paragraph text */
+        }
+    footer {
     background: #d8c1aa;
     color: #333;
     text-align: center;
@@ -306,7 +285,6 @@ footer.fixed {
     left: 0;          /* Ensure it starts from the left edge */
     z-index: 1000;    /* Make sure it stays above other elements */
 }
-
 
     </style>
 </head>
@@ -477,10 +455,14 @@ footer.fixed {
 
    <!-- Footer Section -->
 <footer>
-    <div class="container">
-        <p>&copy; 2024 SA Groups. All rights reserved.</p>
-    </div>
+    <p>&copy; 2024 SA Groups PVT LTD. All Rights Reserved.</p>
+    <p>Follow us on:
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </p>
 </footer>
+
 <script>
     // Function to check if user is at the bottom of the page
     function checkFooterPosition() {
@@ -500,9 +482,18 @@ footer.fixed {
     // Attach the event listener to the scroll event
     window.addEventListener('scroll', checkFooterPosition);
 </script>
+    <script>
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+ </script>
 
    
 </body>
 </html>
-
-
